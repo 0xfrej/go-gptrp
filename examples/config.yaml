@@ -1,0 +1,24 @@
+clipboard:
+  max_size: 72
+  word_wrap: true
+openai:
+  api_key: "openapi api key"
+scenarios:
+  - name: my fun scenario
+    description: Description (not used for any context building, just a cosmetic to distinguish scenarios)
+    narrator_personality: Captain Jack Sparrow heavy a pirate accent # part of "personality" used for transforming original messages into the final format - try to keep it simple
+    # general world building prompt - used for context building (applied to each request)
+    world_building: >-
+    In this world, instead of a single Caribbean sea, there exists an Enchanted Archipelago
+    comprised of numerous mystical islands. Each island possesses its own unique magic, 
+    whether it's a hidden city with advanced technology, a land where mythical creatures 
+    roam freely, or a cursed island with unpredictable phenomena. The pirates navigate 
+    through treacherous waters, seeking legendary artifacts and magical treasures hidden across 
+    the islands. Your task is to describe one of the most mysterious islands and the challenges 
+    pirates face while trying to plunder its secrets.
+
+    # room-specific world building prompt - used for context-aware building (applied to each request)
+    # this is only used if you need to add some base context that will be applied also to every dungeon room
+    # as each dungeon room has it's own context
+    dungeon_room_building: >-
+      You are in a dark, damp dungeon. The walls are made of stone and the floor is covered in dirt.
